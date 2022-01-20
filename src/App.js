@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="body">
       <nav className="sidebar close">
-        <header>
+        <header> 
           <div className="image-text">
             <span className="image">
               <img src={logo} alt="" />
