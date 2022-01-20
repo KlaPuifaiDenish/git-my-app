@@ -27,8 +27,9 @@ function App() {
         <div className="menu-bar">
           <div className="menu">
             <li className="search-box">
-              <i className="bx bx-search icon"></i>
-              <input type="text" placeholder="Search Txn..." />
+            <i className='bx bx-home-alt icon'></i>
+              
+              <span className="text nav-text">หน้าหลัก</span>
             </li>
 
             <ul className="menu-links">
