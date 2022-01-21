@@ -17,6 +17,9 @@
     --primary-color-light: #F6F5FF;
     --toggle-color: #DDD;
     --text-color: #707070;
+    --home-color :#f9f9f9;
+    --hometext-color: #000;
+    --cardline-color:#ddd;
 
     /* ====== Transition ====== */
     --tran-03: all 0.2s ease;
@@ -43,6 +46,9 @@ body.dark{
     --primary-color-light: #3a3b3c;
     --toggle-color: #fff;
     --text-color: #ccc;
+    --home-color :#a7a7a7;
+    --hometext-color: #fff;
+    --cardline-color:#ddd;
 }
 
 /* ===== Sidebar ===== */
@@ -300,6 +306,7 @@ body.dark .switch::before{
     color: var(--text-color);
     padding: 12px 60px;
 }
+
 
 .sidebar.close ~ .home{
     left: 78px;
