@@ -1,139 +1,32 @@
 import React from "react";
 import "../css/Home.css";
+import Type from "./Type";
 export default function Home() {
+  const deps = [
+    { id: 1, depname: "ผู้ป่วยนอก (OPD)",code:'OPD' },
+    { id: 2, depname: "ผู้ป่วยใน (IPD)"  ,code:'IPD'},
+    { id: 3, depname: "นัดผู้ป้วย (FW)" ,code:'FW'} 
+  ];
+
+  const menus = [
+    { id: 1, depname: "รับนอน" },
+    { id: 2, depname: "Admit" },
+    { id: 3, depname: "Report" },
+  ];
+
+
+
   return (
     <>
       <div className="text">Medical Information System</div>
-      <div className="content">
-        <div className="card one">
-          <div className="top">
-            <div className="title">Basic</div>
-            <div className="price-sec">
-              <span className="dollar">$</span>
-              <span className="price">14</span>
-              <span className="decimal">.99</span>
-            </div>
-          </div>
-          <div className="info">
-            Limited features you will get on this package or plan
-          </div>
-          <div className="details">
-            <div className="one">
-              <span>One Addons Domain</span>
-              <i className="fas fa-check"></i>
-            </div>
-            <div className="one">
-              <span>100GB Local Storage</span>
-              <i className="fas fa-check"></i>
-            </div>
-            <div className="one">
-              <span>Lifetime Tech Support</span>
-              <i className="fas fa-times"></i>
-            </div>
-            <div className="one">
-              <span>Unlimited Data Transfer</span>
-              <i className="fas fa-times"></i>
-            </div>
-            <button>Purchase</button>
-          </div>
-        </div>
-        <div className="card one">
-          <div className="top">
-            <div className="title">Basic</div>
-            <div className="price-sec">
-              <span className="dollar">$</span>
-              <span className="price">14</span>
-              <span className="decimal">.99</span>
-            </div>
-          </div>
-          <div className="info">
-            Limited features you will get on this package or plan
-          </div>
-          <div className="details">
-            <div className="one">
-              <span>One Addons Domain</span>
-              <i className="fas fa-check"></i>
-            </div>
-            <div className="one">
-              <span>100GB Local Storage</span>
-              <i className="fas fa-check"></i>
-            </div>
-            <div className="one">
-              <span>Lifetime Tech Support</span>
-              <i className="fas fa-times"></i>
-            </div>
-            <div className="one">
-              <span>Unlimited Data Transfer</span>
-              <i className="fas fa-times"></i>
-            </div>
-            <button>Purchase</button>
-          </div>
-        </div>
-        <div className="card one">
-          <div className="top">
-            <div className="title">Basic</div>
-            <div className="price-sec">
-              <span className="dollar">$</span>
-              <span className="price">14</span>
-              <span className="decimal">.99</span>
-            </div>
-          </div>
-          <div className="info">
-            Limited features you will get on this package or plan
-          </div>
-          <div className="details">
-            <div className="one">
-              <span>One Addons Domain</span>
-              <i className="fas fa-check"></i>
-            </div>
-            <div className="one">
-              <span>100GB Local Storage</span>
-              <i className="fas fa-check"></i>
-            </div>
-            <div className="one">
-              <span>Lifetime Tech Support</span>
-              <i className="fas fa-times"></i>
-            </div>
-            <div className="one">
-              <span>Unlimited Data Transfer</span>
-              <i className="fas fa-times"></i>
-            </div>
-            <button>Purchase</button>
-          </div>
-        </div>
-        <div className="card one">
-          <div className="top">
-            <div className="title">Basic</div>
-            <div className="price-sec">
-              <span className="dollar">$</span>
-              <span className="price">14</span>
-              <span className="decimal">.99</span>
-            </div>
-          </div>
-          <div className="info">
-            Limited features you will get on this package or plan
-          </div>
-          <div className="details">
-            <div className="one">
-              <span>One Addons Domain</span>
-              <i className="fas fa-check"></i>
-            </div>
-            <div className="one">
-              <span>100GB Local Storage</span>
-              <i className="fas fa-check"></i>
-            </div>
-            <div className="one">
-              <span>Lifetime Tech Support</span>
-              <i className="fas fa-times"></i>
-            </div>
-            <div className="one">
-              <span>Unlimited Data Transfer</span>
-              <i className="fas fa-times"></i>
-            </div>
-            <button>Purchase</button>
-          </div>
-        </div>
-        
+      {/* <div className="content">
+        <Type deps={deps} />
+      </div> */}
+      <div className="content" >
+      <Type deps={deps} />
+      </div>
+      <div className="content" >
+      <Type deps={deps} />
       </div>
     </>
   );

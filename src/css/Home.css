@@ -1,24 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+ /*  font-family: 'Poppins', sans-serif; */
+ font-family: 'Noto Sans Thai', sans-serif;
 }
 
 .content {
   max-width: 1090px;
   width: 100%;
-margin-left: 30px;
+  margin-left: 15px;
   display: flex;
-  justify-content: space-between;
+  justify-content:space-between;
   flex-wrap: wrap;
+  
+ 
 }
 .content .card {
   background-color: var(--home-color);
   width: calc(33% - 20px);
   text-align: center;
-
+  height: 280px;
   margin-top: 10px;
   padding: 15px 30px 30px 30px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
@@ -32,15 +37,17 @@ margin-left: 30px;
   clip-path: polygon(0 0, 100% 0, 100% 53%, 49% 100%, 0 53%);
 }
 
+
+
 .content .card .top .title {
   font-size: 27px;
   font-weight: 600;
 }
-.content .card .top .price-sec {
+.content .card .top .num_visit {
   margin-top: -10px;
   font-weight: 600;
 }
-.content .card .top .price {
+.content .card .top .num {
   font-size: 45px;
 }
 .content .card .info {
@@ -66,10 +73,22 @@ margin-left: 30px;
   border-radius: 25px;
 }
 .content .card .details .one i {
-  color: #000;
+  color: #0cb653;
+  font-size: 30px;
 }
-.content .card .details i.fa-times {
+.content .card .details i.bxs-x-circle {
   color: #cd3241;
+  font-size: 30px;
+}
+
+.content .card .details .count__use {
+  color: #0cb653;
+  font-size: 20px;
+}
+
+.content .card .details .count__wrong {
+  color: #cd3241;
+  font-size: 20px;
 }
 .content .card button {
   outline: none;
@@ -87,7 +106,7 @@ margin-left: 30px;
 }
 .content .one .top,
 .content .one button {
-  background: #14eb6e;
+  background: var(--texthome-color);
 }
 .content .two .top,
 .content .two button {
@@ -99,7 +118,14 @@ margin-left: 30px;
 }
 .content button:hover {
   filter: brightness(90%);
+  pointer-events: painted;
 }
+
+.content :hover {
+  filter: brightness(90%);
+  
+}
+
 .content .one ::selection {
   background: #8af5b6;
 }

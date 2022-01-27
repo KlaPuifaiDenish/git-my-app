@@ -20,6 +20,7 @@
     --home-color :#f9f9f9;
     --hometext-color: #000;
     --cardline-color:#ddd;
+    --texthome-color: #ddd;
 
     /* ====== Transition ====== */
     --tran-03: all 0.2s ease;
@@ -49,6 +50,7 @@ body.dark{
     --home-color :#a7a7a7;
     --hometext-color: #fff;
     --cardline-color:#ddd;
+    --texthome-color: #ccc;
 }
 
 /* ===== Sidebar ===== */
