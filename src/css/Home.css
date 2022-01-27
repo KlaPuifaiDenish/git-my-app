@@ -34,10 +34,27 @@
   height: 130px;
   color: var(--hometext-color);
   padding: 12px 0 0 0;
-  clip-path: polygon(0 0, 100% 0, 100% 53%, 49% 100%, 0 53%);
+  clip-path: polygon(0 0, 100% 0, 100% 53%, 100% 100%, 0 53%);
 }
 
+.content .card .top2 {
+  height: 130px;
+  color: var(--hometext-color);
+  padding: 12px 0 0 0;
+  clip-path: polygon(0 0, 100% 0, 100% 53%, 100% 100%, 0 53%);
+}
 
+.content .card .top2 .title {
+  font-size: 27px;
+  font-weight: 600;
+}
+.content .card .top2 .num_visit {
+  margin-top: -10px;
+  font-weight: 600;
+}
+.content .card .top2 .num {
+  font-size: 45px;
+}
 
 .content .card .top .title {
   font-size: 27px;
@@ -108,6 +125,12 @@
 .content .one button {
   background: var(--texthome-color);
 }
+
+.content .one .top2,
+.content .one button {
+  background: var(--texthome-color);
+}
+
 .content .two .top,
 .content .two button {
   background: #e87130;

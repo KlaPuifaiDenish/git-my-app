@@ -1,42 +1,33 @@
 import React, { useState } from "react";
+import subtype from "./functions/SubType";
+import counttype from "./functions/CountType";
+import wrongtype from "./functions/WrongType";
+import csstype from './functions/CssType';
+;
 
 export default function Type({ deps }) {
-  const [uses, setUsers] = useState(0);
-
-  function count(props) {
-    if (props === "OPD") {
-      const opd = 54;
-      const wrong = 4;
-      return opd;
-    } else if (props == "IPD") {
-      const ipd = 16;
-
-      const wrong = 10;
-      return ipd;
-    } else {
-    }
-  }
+  
   return (
     <>
       {deps.map((dep, index) => {
         return (
           <div className="card one" key={index}>
-            <div className="top">
+            <div className={csstype(dep.code)}>
               <div className="title">{dep.depname}</div>
               <div className="num_visit">
-                <span className="num">{count(dep.code)}</span>
+                <span className="num">{subtype(dep.code)}</span>
               </div>
             </div>
             <div className="details">
               <div className="one">
                 <span>ทำการรักษาแล้ว</span>
                 <i className="bx bxs-check-square"></i>
-                <span className="count__use">{uses}</span>
+                <span className="count__use">{counttype(dep.code)}</span>
               </div>
               <div className="one">
                 <span>รอรับการรักษา</span>
                 <i className="bx bxs-x-circle"></i>
-                <span className="count__wrong">4</span>
+                <span className="count__wrong">{wrongtype(dep.code)}</span>
               </div>
               <div className="one"></div>
               {/* <button>Purchase</button> */}
