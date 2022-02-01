@@ -9,9 +9,9 @@ export default function Home() {
   ];
 
   const menus = [
-    { id: 1, depname: "รับนอน" },
-    { id: 2, depname: "Admit" },
-    { id: 3, depname: "Report" },
+    { id: 1, depname: "รับนอน" ,code:'OTH' },
+    { id: 2, depname: "Admit"  ,code:'OTH'},
+    { id: 3, depname: "Report" ,code:'OTH' },
   ];
 
 
@@ -25,8 +25,9 @@ export default function Home() {
       <div className="content" >
       <Type deps={deps} />
       </div>
+      
       <div className="content" >
-      <Type deps={deps} />
+      <Type deps={menus} />
       </div>
     </>
   );

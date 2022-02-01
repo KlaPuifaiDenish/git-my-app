@@ -1,4 +1,3 @@
-import React from "react";
 
 function SubType(props) {
   if (props === "OPD") {

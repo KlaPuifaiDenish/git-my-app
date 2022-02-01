@@ -61,11 +61,11 @@
   font-weight: 600;
 }
 .content .card .top .num_visit {
-  margin-top: -10px;
   font-weight: 600;
 }
 .content .card .top .num {
-  font-size: 45px;
+
+  font-size: 30px;
 }
 .content .card .info {
   font-size: 16px;
