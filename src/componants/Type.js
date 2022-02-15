@@ -3,26 +3,27 @@ import subtype from "./functions/SubType";
 import counttype from "./functions/CountType";
 import wrongtype from "./functions/WrongType";
 import csstype from "./functions/CssType";
+import { Routes, Route, Link } from "react-router-dom";
+
 export default function Type({ deps }) {
   function chk_card(code) {
     if (code === "FW") {
-      return(
+      return (
         <div className="details">
-        <div className="one">
-          <span>จำนวนนัดวันนี้ :</span>
-          <i className="bx bxs-check-square"></i>
-          <span className="count__use">{counttype(code)}</span>
+          <div className="one">
+            <span>จำนวนนัดวันนี้ :</span>
+            <i className="bx bxs-check-square"></i>
+            <span className="count__use">{counttype(code)}</span>
+          </div>
         </div>
-      </div>
-      )
-    } else if (code === "OTH")  {
+      );
+    } else if (code === "OTH") {
       return (
         <div className="details">
           <div className="one"></div>
         </div>
       );
-    }
-    else  {
+    } else {
       return (
         <div className="details">
           <div className="one">
@@ -42,16 +43,18 @@ export default function Type({ deps }) {
   return (
     <>
       {deps.map((dep, index) => {
+        
         return (
-          <div className="card one" key={index}>
+          <Link to={'/'+dep.link} className="card one" key={index}>
             <div className={csstype(dep.code)}>
               <div className="title">{dep.depname}</div>
               <div className="num_visit">
                 <span className="num">{subtype(dep.code)}</span>
               </div>
             </div>
+
             {chk_card(dep.code)}
-          </div>
+          </Link>
         );
       })}
     </>

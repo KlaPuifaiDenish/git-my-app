@@ -2,16 +2,23 @@ import React, { useEffect } from "react";
 import "./css/index.css";
 import JsIndex from "./javascript/JsIndex";
 import menubar from "./componants/MenuBar";
-import home from "./componants/Home"
-
+import Home from "./componants/Home";
+import Opd from "./componants/Opd";
+import { Routes, Route, Link } from "react-router-dom";
 
 function App() {
-    JsIndex()
-    const logo = require('./Img/logo192.png')
+
+  useEffect(()=>{
+
+  },[])
+  JsIndex();
+  const logo = require("./Img/logo192.png");
+
+
   return (
     <div className="body">
       <nav className="sidebar close">
-        <header> 
+        <header>
           <div className="image-text">
             <span className="image">
               <img src={logo} alt="" />
@@ -51,7 +58,12 @@ function App() {
         </div>
       </nav>
       <section className="home">
-        {home()}
+        <div className="text">Medical Information System</div>
+        <Routes>
+          <Route path="/home" element={<Home />} />
+          <Route path="/opd" element={<Opd />} />
+        </Routes>
+        {/*  {home()} */}
       </section>
     </div>
   );

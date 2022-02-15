@@ -1,20 +1,23 @@
 import React from "react";
-
+import { Routes, Route, Link } from "react-router-dom";
 const menuBar = () => {
   return (
     <div className="menu">
       <li className="search-box">
+      <Link to="/home">
         <i className="bx bx-home-alt icon"></i>
-
         <span className="text nav-text">หน้าหลัก</span>
+        </Link>
       </li>
 
       <ul className="menu-links">
         <li className="nav-link">
+        <Link to="/opd">
           <a href="#">
             <i className="bx bx-plus-medical icon"></i>
             <span className="text nav-text">ผู้ป่วยนอก (OPD)</span>
           </a>
+          </Link>
         </li>
 
         <li className="nav-link">
